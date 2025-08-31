@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="bg-white border-t-2 border-blue-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="flex flex-col items-center gap-8">
+        <div className="flex flex-col items-start gap-8">
           {/* Logo */}
           <div className="flex items-center gap-3">
             <div className="bg-gradient-blue p-2 rounded-lg">
@@ -16,7 +16,7 @@ const Footer = () => {
           </div>
 
           {/* Contact Information */}
-          <div className="flex flex-col sm:flex-row items-center gap-6">
+          <div className="flex flex-col sm:flex-row items-start gap-6">
             <a 
               href="mailto:routezeasy@gmail.com"
               className="flex items-center gap-3 text-foreground hover:text-primary transition-colors duration-300"
@@ -39,7 +39,7 @@ const Footer = () => {
           </div>
 
           {/* Copyright Disclaimer */}
-          <div className="text-muted-foreground text-sm text-center">
+          <div className="text-muted-foreground text-sm">
             © 2025 EasyRoutez. All Rights Reserved.
           </div>
         </div>
