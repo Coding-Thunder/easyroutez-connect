@@ -1,41 +1,46 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
-
 const faqs = [
   {
     question: "How does EasyRoutez work?",
-    answer: "Simply call us and we'll take care of your bookings. Our travel experts will help you find the best flights, handle all reservations, and ensure you get the best deals available."
+    answer:
+      "Just call us, and our travel experts will handle everything — from booking flights and reserving hotels to arranging car rentals. We ensure smooth planning and the best deals, all in one place.",
   },
   {
-    question: "Do you offer international flights?",
-    answer: "Yes, we work with major airlines worldwide to offer comprehensive international flight booking services. From domestic to international destinations, we've got you covered."
+    question: "Do you offer international bookings?",
+    answer:
+      "Yes! Whether it's international flights, overseas hotels, or rental cars abroad, we partner with trusted providers worldwide to give you full travel coverage.",
   },
   {
     question: "Is there a service fee?",
-    answer: "We charge a minimal service fee depending on the booking type and complexity. Our transparent pricing ensures you know exactly what you're paying for with no hidden costs."
+    answer:
+      "We charge a minimal service fee based on the type of booking — flights, hotels, or car rentals. Our pricing is fully transparent, with no hidden costs.",
   },
   {
     question: "How quickly can you process bookings?",
-    answer: "Most bookings are processed immediately during your call. For complex itineraries or special requests, we typically complete bookings within 2-4 hours."
+    answer:
+      "Most bookings are confirmed instantly during your call. Complex itineraries or special hotel/car rental requests are usually completed within 2–4 hours.",
   },
   {
     question: "Can you help with last-minute travel?",
-    answer: "Absolutely! We specialize in both advance bookings and last-minute travel arrangements. Our team is available to help you secure flights even on short notice."
+    answer:
+      "Absolutely! Whether you need a last-minute flight, hotel stay, or car rental, we specialize in securing quick bookings to keep your plans stress-free.",
   },
   {
-    question: "What if I need to change my booking?",
-    answer: "We handle all booking modifications and cancellations according to airline policies. Simply call us, and we'll assist you with any changes needed to your reservation."
-  }
+    question: "What if I need to change or cancel my booking?",
+    answer:
+      "We manage all changes and cancellations for flights, hotels, and car rentals according to provider policies. Just call us, and we'll take care of the rest.",
+  },
 ];
 
 const FAQSection = () => {
   const [openItems, setOpenItems] = useState<number[]>([]);
 
   const toggleItem = (index: number) => {
-    setOpenItems(prev => 
-      prev.includes(index) 
-        ? prev.filter(item => item !== index)
+    setOpenItems((prev) =>
+      prev.includes(index)
+        ? prev.filter((item) => item !== index)
         : [...prev, index]
     );
   };

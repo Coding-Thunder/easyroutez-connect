@@ -17,7 +17,11 @@ const Header = () => {
           </div>
 
           {/* Call Button */}
-          <CallButton variant="header" size="sm" />
+          <CallButton
+            variant="header"
+            className="animate-pulse duration-1000"
+            size="sm"
+          />
         </div>
       </div>
     </header>

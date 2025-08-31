@@ -75,6 +75,7 @@ export default {
 			},
 			backgroundImage: {
 				'gradient-blue': 'var(--gradient-blue)',
+				"hero-bg": "url('/hero.jpg')", // 👈 using PNG file
 			},
 			transitionTimingFunction: {
 				'smooth': 'var(--transition-smooth)',
