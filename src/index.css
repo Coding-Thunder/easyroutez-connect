@@ -2,9 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* EasyRoutez Design System - Professional Travel Service */
 
 @layer base {
   :root {
@@ -17,26 +15,40 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* EasyRoutez Primary Blue */
+    --primary: 217 91% 51%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 217 91% 95%;
+    --primary-dark: 217 91% 35%;
 
-    --secondary: 210 40% 96.1%;
+    /* Professional Grays */
+    --secondary: 220 14% 96%;
     --secondary-foreground: 222.2 47.4% 11.2%;
 
-    --muted: 210 40% 96.1%;
+    --muted: 220 14% 96%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 217 91% 95%;
+    --accent-foreground: 217 91% 35%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Borders and Inputs */
+    --border: 217 32% 92%;
+    --input: 217 32% 92%;
+    --ring: 217 91% 51%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Custom EasyRoutez Variables */
+    --blue-accent: 217 91% 51%;
+    --blue-light: 217 91% 95%;
+    --blue-border: 217 32% 80%;
+    --shadow-soft: 0 2px 10px -2px hsl(217 32% 80% / 0.2);
+    --shadow-medium: 0 4px 20px -4px hsl(217 32% 80% / 0.3);
+    --gradient-blue: linear-gradient(135deg, hsl(217 91% 51%), hsl(217 91% 65%));
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
 

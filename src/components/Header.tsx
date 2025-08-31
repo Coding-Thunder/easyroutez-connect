@@ -1,0 +1,27 @@
+import { Plane } from "lucide-react";
+import CallButton from "./CallButton";
+
+const Header = () => {
+  return (
+    <header className="bg-white border-b-2 border-blue-border shadow-soft">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <div className="flex items-center gap-3">
+            <div className="bg-gradient-blue p-2 rounded-lg">
+              <Plane className="w-6 h-6 text-white" />
+            </div>
+            <h1 className="text-2xl font-bold text-foreground">
+              EasyRoutez
+            </h1>
+          </div>
+
+          {/* Call Button */}
+          <CallButton variant="header" size="sm" />
+        </div>
+      </div>
+    </header>
+  );
+};
+
+export default Header;
