@@ -5,7 +5,6 @@ const Footer = () => {
     <footer className="bg-gradient-to-b from-white to-blue-50 border-t border-blue-200">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 py-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
-          
           {/* Logo */}
           <div className="flex items-center gap-3">
             <div className="bg-gradient-to-r from-blue-500 to-blue-700 p-2 rounded-xl shadow-md">
@@ -36,7 +35,8 @@ const Footer = () => {
 
         {/* Divider + Copyright */}
         <div className="border-t border-gray-200 mt-6 pt-4 text-sm text-gray-500 text-center">
-          © 2025 <span className="font-semibold text-blue-900">EasyRoutez</span>. All Rights Reserved.
+          © 2025 <span className="font-semibold text-blue-900">EasyRoutez</span>
+          . All Rights Reserved.
         </div>
       </div>
     </footer>
