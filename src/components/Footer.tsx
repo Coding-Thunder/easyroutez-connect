@@ -4,9 +4,9 @@ const Footer = () => {
   return (
     <footer className="bg-white border-t-2 border-blue-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="text-center">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Logo */}
-          <div className="flex items-center justify-center gap-3 mb-8">
+          <div className="flex items-center gap-3">
             <div className="bg-gradient-blue p-2 rounded-lg">
               <Plane className="w-6 h-6 text-white" />
             </div>
@@ -16,37 +16,31 @@ const Footer = () => {
           </div>
 
           {/* Contact Information */}
-          <div className="space-y-4 mb-8">
-            <div className="flex items-center justify-center gap-3">
+          <div className="flex flex-col sm:flex-row items-center gap-6">
+            <a 
+              href="mailto:routezeasy@gmail.com"
+              className="flex items-center gap-3 text-foreground hover:text-primary transition-colors duration-300"
+            >
               <div className="bg-primary-light p-2 rounded-lg">
                 <Mail className="w-5 h-5 text-primary" />
               </div>
-              <a 
-                href="mailto:routezeasy@gmail.com"
-                className="text-lg text-foreground hover:text-primary transition-colors duration-300"
-              >
-                routezeasy@gmail.com
-              </a>
-            </div>
+              <span className="font-medium">routezeasy@gmail.com</span>
+            </a>
             
-            <div className="flex items-center justify-center gap-3">
+            <a 
+              href="tel:+18557616979"
+              className="flex items-center gap-3 text-foreground hover:text-primary transition-colors duration-300"
+            >
               <div className="bg-primary-light p-2 rounded-lg">
                 <Phone className="w-5 h-5 text-primary" />
               </div>
-              <a 
-                href="tel:+18557616979"
-                className="text-lg text-foreground hover:text-primary transition-colors duration-300"
-              >
-                +1 855-761-6979
-              </a>
-            </div>
+              <span className="font-medium">+1 855-761-6979</span>
+            </a>
           </div>
 
           {/* Copyright */}
-          <div className="pt-8 border-t border-blue-border">
-            <p className="text-muted-foreground">
-              © 2025 EasyRoutez. All Rights Reserved.
-            </p>
+          <div className="text-muted-foreground text-sm">
+            © 2025 EasyRoutez. All Rights Reserved.
           </div>
         </div>
       </div>

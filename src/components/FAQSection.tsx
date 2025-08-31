@@ -58,7 +58,10 @@ const FAQSection = () => {
             return (
               <div
                 key={index}
-                className="border-2 border-blue-border rounded-xl overflow-hidden bg-white hover:border-primary transition-colors duration-300"
+                className={cn(
+                  "rounded-xl overflow-hidden bg-white transition-all duration-300",
+                  isOpen ? "shadow-medium" : "hover:shadow-soft"
+                )}
               >
                 <button
                   onClick={() => toggleItem(index)}
