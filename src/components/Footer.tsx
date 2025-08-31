@@ -39,7 +39,7 @@ const Footer = () => {
           </div>
 
           {/* Copyright Disclaimer */}
-          <div className="text-muted-foreground text-sm">
+          <div className="text-muted-foreground text-sm text-center w-full">
             © 2025 EasyRoutez. All Rights Reserved.
           </div>
         </div>
