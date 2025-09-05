@@ -10,7 +10,9 @@ const Footer = () => {
             <div className="bg-gradient-to-r from-blue-500 to-blue-700 p-2 rounded-xl shadow-md">
               <Plane className="w-6 h-6 text-white" />
             </div>
-            <h2 className="text-xl font-bold text-blue-900">EasyRoutez</h2>
+            <h2 className="text-xl font-bold text-blue-900">
+              RentalConfirmation
+            </h2>
           </div>
 
           {/* Contact Information */}
@@ -35,7 +37,10 @@ const Footer = () => {
 
         {/* Divider + Copyright */}
         <div className="border-t border-gray-200 mt-6 pt-4 text-sm text-gray-500 text-center">
-          © 2025 <span className="font-semibold text-blue-900">EasyRoutez</span>
+          © 2025{" "}
+          <span className="font-semibold text-blue-900">
+            RentalConfirmation
+          </span>
           . All Rights Reserved.
         </div>
       </div>
