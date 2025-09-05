@@ -14,7 +14,7 @@ const HeroSection = () => {
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
           Your One-Stop Travel Partner with{" "}
-          <span className="text-blue-light">EazyRoutez</span>
+          <span className="text-blue-light">RentalConfirmation</span>
         </h1>
         <p className="text-xl text-blue-light mb-12 max-w-3xl mx-auto">
           From <span className="font-semibold">Flights</span> to{" "}
