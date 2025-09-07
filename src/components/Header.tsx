@@ -12,7 +12,7 @@ const Header = () => {
               <Plane className="w-6 h-6 text-white" />
             </div>
             <h1 className="text-2xl font-bold text-foreground">
-              EazyRoutez.com
+              FlightBizz.com
             </h1>
           </div>
 
