@@ -11,9 +11,7 @@ const Header = () => {
             <div className="bg-gradient-blue p-2 rounded-lg">
               <Plane className="w-6 h-6 text-white" />
             </div>
-            <h1 className="text-2xl font-bold text-foreground">
-              EazyRoutez.com
-            </h1>
+            <h1 className="text-2xl font-bold text-foreground">Autrova.com</h1>
           </div>
 
           {/* Call Button */}

@@ -10,17 +10,17 @@ const Footer = () => {
             <div className="bg-gradient-to-r from-blue-500 to-blue-700 p-2 rounded-xl shadow-md">
               <Plane className="w-6 h-6 text-white" />
             </div>
-            <h2 className="text-xl font-bold text-blue-900">EasyRoutez</h2>
+            <h2 className="text-xl font-bold text-blue-900">Autrova</h2>
           </div>
 
           {/* Contact Information */}
           <div className="flex flex-col sm:flex-row items-center gap-6">
             <a
-              href="mailto:routezeasy@gmail.com"
+              href="mailto:support@autrova.com"
               className="flex items-center gap-2 text-gray-700 hover:text-blue-600 transition-colors"
             >
               <Mail className="w-5 h-5 text-blue-600" />
-              <span className="font-medium">routezeasy@gmail.com</span>
+              <span className="font-medium">support@autrova.com</span>
             </a>
 
             <a
@@ -35,8 +35,8 @@ const Footer = () => {
 
         {/* Divider + Copyright */}
         <div className="border-t border-gray-200 mt-6 pt-4 text-sm text-gray-500 text-center">
-          © 2025 <span className="font-semibold text-blue-900">EasyRoutez</span>
-          . All Rights Reserved.
+          © 2025 <span className="font-semibold text-blue-900">Autrova</span>.
+          All Rights Reserved.
         </div>
       </div>
     </footer>

@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* EasyRoutez Design System - Professional Travel Service */
+/* Autrova Design System - Professional Travel Service */
 
 @layer base {
   :root {
@@ -15,7 +15,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    /* EasyRoutez Primary Blue */
+    /* Autrova Primary Blue */
     --primary: 217 91% 51%;
     --primary-foreground: 0 0% 100%;
     --primary-light: 217 91% 95%;
@@ -41,7 +41,7 @@
 
     --radius: 0.75rem;
 
-    /* Custom EasyRoutez Variables */
+    /* Custom Autrova Variables */
     --blue-accent: 217 91% 51%;
     --blue-light: 217 91% 95%;
     --blue-border: 217 32% 80%;
