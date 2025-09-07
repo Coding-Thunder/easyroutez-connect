@@ -8,10 +8,12 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <div className="bg-gradient-blue p-2 rounded-lg">
+            {/* <div className="bg-gradient-blue p-2 rounded-lg">
               <Plane className="w-6 h-6 text-white" />
-            </div>
-            <h1 className="text-2xl font-bold text-foreground">Autrova.com</h1>
+            </div> */}
+            <h1 className="text-2xl font-bold text-foreground">
+              Autrova<span className="text-blue-600">.com</span>
+            </h1>
           </div>
 
           {/* Call Button */}
