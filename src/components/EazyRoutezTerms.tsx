@@ -161,9 +161,9 @@ export default function EazyRoutezTerms() {
               </PageShell>
             ) : (
               <PageShell title={`${eazyRoutezData.name} — Cancellation Policy`}>
-                <p className="mb-2 text-sm text-gray-700">
+                {/* <p className="mb-2 text-sm text-gray-700">
                   Last updated: {new Date().toLocaleDateString()}
-                </p>
+                </p> */}
                 {eazyRoutezData.cancellation}
               </PageShell>
             )}
