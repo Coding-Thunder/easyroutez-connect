@@ -1,4 +1,5 @@
-import { Mail, Phone, Plane } from "lucide-react";
+import { Mail, Phone, Plane, FileText } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -15,16 +16,14 @@ const Footer = () => {
             </h2>
           </div>
 
-          {/* Contact Information */}
+          {/* Contact + Links */}
           <div className="flex flex-col sm:flex-row items-center gap-6">
             <a
-              href="mailto:routezeasy@gmail.com"
+              href="mailto:support@rentalconfirmation.com"
               className="flex items-center gap-2 text-gray-700 hover:text-green-600 transition-colors"
             >
               <Mail className="w-5 h-5 text-green-600" />
-              <span className="font-medium">
-                support@rentalconfirmation.com
-              </span>
+              <span className="font-medium">support@rentalconfirmation.com</span>
             </a>
 
             <a
@@ -34,6 +33,15 @@ const Footer = () => {
               <Phone className="w-5 h-5 text-green-600" />
               <span className="font-medium">+1 855-761-6979</span>
             </a>
+
+            {/* Terms & Conditions Link */}
+            <Link
+              to="/terms"
+              className="flex items-center gap-2 text-gray-700 hover:text-green-600 transition-colors"
+            >
+              <FileText className="w-5 h-5 text-green-600" />
+              <span className="font-medium">Terms & Conditions</span>
+            </Link>
           </div>
         </div>
 
