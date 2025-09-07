@@ -11,7 +11,7 @@ const CarsPage = () => {
     <div className="min-h-screen bg-white">
       <Header />
       <main>
-        <CarHero />
+        <HeroSection />
         <CarRentalWidget />
         <DiscountsSection />
         <FAQSection />

@@ -12,7 +12,7 @@ const HotelPage = () => {
     <div className="min-h-screen bg-white">
       <Header />
       <main>
-        <HotelHero />
+        <HeroSection />
         <HotelWidget />
         <div className="flex items-center justify-center">
           <MapWidget />
