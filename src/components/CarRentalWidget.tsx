@@ -13,12 +13,6 @@ const CarRentalWidget = () => {
     if (container) {
       container.appendChild(script);
     }
-
-    return () => {
-      if (container && script.parentNode) {
-        container.removeChild(script);
-      }
-    };
   }, []);
 
   return <div id="car-widget-2" className="mt-8"></div>;
