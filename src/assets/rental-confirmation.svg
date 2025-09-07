@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="260" viewBox="0 0 900 260">
+  <defs>
+    <style>
+      .title-left {
+        font-family: "ITC Benguiat", "Georgia", "Times New Roman", serif;
+        font-weight: 800;
+        font-size: 88px;
+        fill: #111111;
+        letter-spacing: 1px;
+      }
+      .title-right {
+        font-family: "ITC Benguiat", "Georgia", "Times New Roman", serif;
+        font-weight: 800;
+        font-size: 80px;
+        fill: #111111;
+        letter-spacing: 0.5px;
+      }
+    </style>
+  </defs>
+
+  <!-- Left title -->
+  <text x="40" y="105" class="title-left">RENTAL</text>
+
+  <!-- Accent lines under RENTAL -->
+  <!-- thin green line -->
+  <rect x="40" y="120" width="300" height="8" rx="2" ry="2" fill="#1C9A6B"/>
+  <!-- three orange bars -->
+  <rect x="40" y="140" width="300" height="14" rx="3" ry="3" fill="#F0852A"/>
+  <rect x="40" y="160" width="300" height="14" rx="3" ry="3" fill="#F0852A"/>
+  <rect x="40" y="180" width="300" height="14" rx="3" ry="3" fill="#F0852A"/>
+
+  <!-- Right title -->
+  <text x="360" y="155" class="title-right">CONFIRMATION</text>
+</svg>

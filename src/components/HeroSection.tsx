@@ -6,8 +6,7 @@ const scripts: Record<string, string | null> = {
   flights: null, // Flights widget is usually in index.html or already loaded
   hotels:
     "https://tpwgt.com/content?currency=usd&trs=452609&shmarker=667755&show_hotels=true&powered_by=true&locale=en&searchUrl=search.hotellook.com&primary_override=%23FF8E01&color_button=%23FF8E01&color_icons=%23FF8E01&secondary=%23FFFFFF&dark=%23262626&light=%23FFFFFF&special=%23C4C4C4&color_focused=%23FF8E01&border_radius=5&plain=false&promo_id=7873&campaign_id=101",
-  cars:
-    "https://tpwgt.com/content?trs=452609&shmarker=667755&locale=en&powered_by=true&border_radius=5&plain=true&show_logo=true&color_background=%23ffca28&color_button=%2355a539&color_text=%23000000&color_input_text=%23000000&color_button_text=%23ffffff&promo_id=4480&campaign_id=10",
+  cars: "https://tpwgt.com/content?trs=452609&shmarker=667755&locale=en&powered_by=true&border_radius=5&plain=true&show_logo=true&color_background=%23ffca28&color_button=%2355a539&color_text=%23000000&color_input_text=%23000000&color_button_text=%23ffffff&promo_id=4480&campaign_id=10",
 };
 
 const HeroSection = () => {
