@@ -159,9 +159,9 @@ export default function AutrovaTerms() {
           <div className="md:col-span-3">
             {activeTab === "terms" ? (
               <PageShell title={`${autrovaData.name} — Terms & Conditions`}>
-                <p className="mb-2 text-sm text-gray-700">
+                {/* <p className="mb-2 text-sm text-gray-700">
                   Last updated: {new Date().toLocaleDateString()}
-                </p>
+                </p> */}
                 {autrovaData.terms}
               </PageShell>
             ) : (
