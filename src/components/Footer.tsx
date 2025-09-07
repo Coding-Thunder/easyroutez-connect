@@ -22,7 +22,9 @@ const Footer = () => {
               className="flex items-center gap-2 text-gray-700 hover:text-green-600 transition-colors"
             >
               <Mail className="w-5 h-5 text-green-600" />
-              <span className="font-medium">routezeasy@gmail.com</span>
+              <span className="font-medium">
+                support@rentalconfirmation.com
+              </span>
             </a>
 
             <a
