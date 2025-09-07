@@ -4,35 +4,36 @@ const discounts = [
   {
     icon: Globe,
     title: "Up to 20% off on International Flights",
-    description: "Save big on your international travel bookings"
+    description: "Save big on your international travel bookings",
   },
   {
     icon: Calendar,
     title: "Special Weekend Deals",
-    description: "Exclusive discounts for weekend getaways"
+    description: "Exclusive discounts for weekend getaways",
   },
   {
     icon: GraduationCap,
     title: "Student Travel Discounts",
-    description: "Special rates for students and young travelers"
+    description: "Special rates for students and young travelers",
   },
   {
     icon: Percent,
     title: "Group Booking Savings",
-    description: "Additional savings for group reservations"
-  }
+    description: "Additional savings for group reservations",
+  },
 ];
 
 const DiscountsSection = () => {
   return (
-    <section className="bg-blue-light py-16 lg:py-20">
+    <section className="py-16 lg:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
             Exclusive Deals & Discounts
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Take advantage of our special offers and save on your next travel booking
+            Take advantage of our special offers and save on your next travel
+            booking
           </p>
         </div>
 
@@ -44,7 +45,7 @@ const DiscountsSection = () => {
                 key={index}
                 className="bg-white rounded-xl p-6 border-2 border-blue-border hover:border-primary transition-all duration-300 hover:shadow-medium group"
               >
-                <div className="bg-gradient-blue p-3 rounded-lg w-fit mb-4 group-hover:scale-110 transition-transform duration-300">
+                <div className="bg-green-400 p-3 rounded-lg w-fit mb-4 group-hover:scale-110 transition-transform duration-300">
                   <IconComponent className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-foreground mb-2">

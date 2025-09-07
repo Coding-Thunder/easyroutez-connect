@@ -6,9 +6,10 @@ const Header = () => {
     <header className="bg-white border-b-2 border-blue-border shadow-soft">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
+          
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <div className="bg-gradient-blue p-2 rounded-lg">
+            <div className="bg-green-400 p-2 rounded-lg">
               <Plane className="w-6 h-6 text-white" />
             </div>
             <h1 className="text-2xl font-bold text-foreground">

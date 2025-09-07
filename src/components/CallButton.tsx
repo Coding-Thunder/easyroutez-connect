@@ -14,7 +14,7 @@ const CallButton = ({ variant = "primary", size = "md", className }: CallButtonP
   const variants = {
     primary: "bg-gradient-blue text-white border-2 border-primary hover:bg-primary-dark hover:scale-105",
     secondary: "bg-white text-primary border-2 border-primary hover:bg-primary-light",
-    header: "bg-primary text-primary-foreground hover:bg-primary-dark border border-primary"
+    header: "bg-green-400 text-primary-foreground hover:bg-primary-dark"
   };
 
   const sizes = {

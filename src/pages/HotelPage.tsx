@@ -3,19 +3,20 @@ import HeroSection from "@/components/HeroSection";
 import DiscountsSection from "@/components/DiscountsSection";
 import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
+import HotelHero from "@/components/HotelHero";
+import HotelWidget from "@/components/HotelWidget";
+import MapWidget from "@/components/HotelMap";
 
-const Index = () => {
+const HotelPage = () => {
   return (
     <div className="min-h-screen bg-white">
       <Header />
       <main>
-        <HeroSection />
-
-        {/* Centered Travelpayouts Tickets Widget */}
-        <div className="flex justify-center my-12 px-4">
-          <div id="tpwl-tickets" className="w-full max-w-6xl"></div>
+        <HotelHero />
+        <HotelWidget />
+        <div className="flex items-center justify-center">
+          <MapWidget />
         </div>
-
         <DiscountsSection />
         <FAQSection />
       </main>
@@ -24,4 +25,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default HotelPage;
