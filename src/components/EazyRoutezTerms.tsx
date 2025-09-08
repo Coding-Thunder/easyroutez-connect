@@ -84,7 +84,9 @@ function PageShell({ title, children }) {
       <div className="flex items-start justify-between flex-wrap gap-2">
         <div>
           <h1 className="text-2xl font-bold">{title}</h1>
-          <p className="text-sm text-muted-foreground">{eazyRoutezData.domain}</p>
+          <p className="text-sm text-muted-foreground">
+            {eazyRoutezData.domain}
+          </p>
         </div>
         <div className="space-x-2">
           <button
