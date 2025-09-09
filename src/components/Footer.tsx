@@ -25,11 +25,11 @@ const Footer = () => {
             </a>
 
             <a
-              href="tel:+18557616979"
+              href="tel:+18778684662"
               className="flex items-center gap-2 text-gray-700 hover:text-blue-600 transition-colors"
             >
               <Phone className="w-5 h-5 text-blue-600" />
-              <span className="font-medium">+1 855-761-6979</span>
+              <span className="font-medium">+1-877-868-4662</span>
             </a>
 
             {/* Terms & Conditions Link */}
@@ -45,9 +45,8 @@ const Footer = () => {
 
         {/* Divider + Copyright */}
         <div className="border-t border-gray-200 mt-6 pt-4 text-sm text-gray-500 text-center">
-          © 2025{" "}
-          <span className="font-semibold text-blue-900">EazyRoutez</span>. All
-          Rights Reserved.
+          © 2025 <span className="font-semibold text-blue-900">EazyRoutez</span>
+          . All Rights Reserved.
         </div>
       </div>
     </footer>
