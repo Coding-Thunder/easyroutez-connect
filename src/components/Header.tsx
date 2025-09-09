@@ -10,7 +10,7 @@ const Header = () => {
             {/* <div className="bg-gradient-blue p-2 rounded-lg">
               <Plane className="w-6 h-6 text-white" />
             </div> */}
-            <h1 className="text-2xl font-bold text-foreground">
+            <h1 className="text-xl md:text-2xl font-bold text-foreground">
               Autrova<span className="text-blue-600">.com</span>
             </h1>
           </div>
