@@ -23,15 +23,17 @@ const Footer = () => {
               className="flex items-center gap-2 text-gray-700 hover:text-green-600 transition-colors"
             >
               <Mail className="w-5 h-5 text-green-600" />
-              <span className="font-medium">support@rentalconfirmation.com</span>
+              <span className="font-medium">
+                support@rentalconfirmation.com
+              </span>
             </a>
 
             <a
-              href="tel:+18557616979"
+              href="tel:+18883194407"
               className="flex items-center gap-2 text-gray-700 hover:text-green-600 transition-colors"
             >
               <Phone className="w-5 h-5 text-green-600" />
-              <span className="font-medium">+1 855-761-6979</span>
+              <span className="font-medium">+1-888-319-4407</span>
             </a>
 
             {/* Terms & Conditions Link */}
