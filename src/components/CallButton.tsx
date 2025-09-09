@@ -35,7 +35,7 @@ const CallButton = ({ variant = "primary", size = "md", className }: CallButtonP
     >
       <a href="tel:+18557616979" className="inline-flex items-center">
         <Phone className="w-5 h-5" />
-        Call Now
+        1-855-761-6979
       </a>
     </Button>
   );
