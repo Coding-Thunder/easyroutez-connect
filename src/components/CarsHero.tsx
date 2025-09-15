@@ -44,7 +44,14 @@ const CarsHero = () => {
                   ? "bg-green-400 text-white"
                   : "bg-white text-green-900 hover:bg-green-200"
               }`}
-              onClick={() => navigate(tab.path)}
+              onClick={() => {
+                if (tab.key === "flights") {
+                  navigate(tab.path);
+                  window.location.reload();
+                } else {
+                  navigate(tab.path);
+                }
+              }}
             >
               {tab.label}
             </button>
