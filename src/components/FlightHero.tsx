@@ -44,7 +44,7 @@ const FlightsHero = () => {
 
         {/* Widget */}
         <div className="bg-white rounded-xl p-4 shadow-xl">
-          <div id="tpwl-search"></div>
+          <div id="tpwl-search"></div>{" "}
         </div>
       </div>
     </section>

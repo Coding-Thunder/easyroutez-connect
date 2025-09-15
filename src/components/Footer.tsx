@@ -11,21 +11,17 @@ const Footer = () => {
             <div className="bg-gradient-to-r from-green-400 to-green-600 p-2 rounded-xl shadow-md">
               <Plane className="w-6 h-6 text-white" />
             </div>
-            <h2 className="text-xl font-bold text-green-900">
-              RentalConfirmation
-            </h2>
+            <h2 className="text-xl font-bold text-green-900">EazyRoutez</h2>
           </div>
 
           {/* Contact + Links */}
           <div className="flex flex-col sm:flex-row items-center gap-6">
             <a
-              href="mailto:support@rentalconfirmation.com"
+              href="mailto:support@eazyroutez.com"
               className="flex items-center gap-2 text-gray-700 hover:text-green-600 transition-colors"
             >
               <Mail className="w-5 h-5 text-green-600" />
-              <span className="font-medium">
-                support@rentalconfirmation.com
-              </span>
+              <span className="font-medium">support@eazyroutez.com</span>
             </a>
 
             <a
@@ -50,10 +46,8 @@ const Footer = () => {
         {/* Divider + Copyright */}
         <div className="border-t border-gray-200 mt-6 pt-4 text-sm text-gray-500 text-center">
           © 2025{" "}
-          <span className="font-semibold text-green-900">
-            RentalConfirmation
-          </span>
-          . All Rights Reserved.
+          <span className="font-semibold text-green-900">EazyRoutez</span>. All
+          Rights Reserved.
         </div>
       </div>
     </footer>

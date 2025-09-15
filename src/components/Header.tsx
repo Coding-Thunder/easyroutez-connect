@@ -11,8 +11,8 @@ const Header = () => {
               <Plane className="w-6 h-6 text-white" />
             </div> */}
             <h1 className="text-xl md:text-2xl text-green-400 font-bold text-foreground flex flex-col sm:flex-row">
-              <span className="text-black">Rental</span>
-              <span>Confirmation</span>
+              <span className="text-black">Eazy</span>
+              <span>Routez</span>
             </h1>
           </div>
 

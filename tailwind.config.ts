@@ -54,7 +54,7 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				// RentalConfirmation Custom Colors
+				// EazyRoutez Custom Colors
 				'blue-accent': 'hsl(var(--blue-accent))',
 				'blue-light': 'hsl(var(--blue-light))',
 				'blue-border': 'hsl(var(--blue-border))',

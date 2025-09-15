@@ -2,15 +2,15 @@ import React, { useState } from "react";
 
 const rentalData = {
   name: "Rental Confirmation",
-  domain: "rentalconfirmation.com",
-  supportEmail: "support@rentalconfirmation.com",
-  terms: `Welcome to RentalConfirmation (rentalconfirmation.com). By accessing or using
+  domain: "EazyRoutez.com",
+  supportEmail: "support@EazyRoutez.com",
+  terms: `Welcome to EazyRoutez (EazyRoutez.com). By accessing or using
 our platform, you agree to comply with and be bound by the following Terms &
-Conditions. These terms govern your relationship with RentalConfirmation, which
+Conditions. These terms govern your relationship with EazyRoutez, which
 acts solely as an intermediary between guests and property hosts/suppliers.
 
 Scope of Services:
-- RentalConfirmation provides an online platform for listing, searching, and booking
+- EazyRoutez provides an online platform for listing, searching, and booking
   short-term rental accommodations. We do not own, manage, or control the rental
   properties listed.
 - Hosts are solely responsible for accuracy of their listings, property condition,
@@ -27,27 +27,27 @@ User Obligations:
 Bookings & Payments:
 - All prices are displayed clearly before checkout. Taxes, fees, or surcharges may
   apply as indicated by the host.
-- Payments may be processed directly by the host, or by RentalConfirmation on the
+- Payments may be processed directly by the host, or by EazyRoutez on the
   host’s behalf. If processed by us, secure payment gateways are used.
 - A booking is confirmed once you receive a written/email confirmation including
 your booking ID.
 
 Liability:
-- RentalConfirmation is not liable for host actions, property condition, or service
+- EazyRoutez is not liable for host actions, property condition, or service
 delivery beyond what is outlined in the host listing.
-- Any disputes must be raised with the host first. RentalConfirmation will assist
+- Any disputes must be raised with the host first. EazyRoutez will assist
 in mediation where possible but is not the guarantor of refunds or resolutions.
 
 Modifications & Termination:
 - Hosts may refuse, cancel, or modify bookings in line with their policies.
-- RentalConfirmation reserves the right to suspend access if misuse or fraudulent
+- EazyRoutez reserves the right to suspend access if misuse or fraudulent
 activity is detected.
 
 Changes to Terms:
 - These Terms & Conditions may be updated periodically. Users will be notified via
 the website or email when significant changes occur.
 `,
-  cancellation: `Cancellation Policy — RentalConfirmation (rentalconfirmation.com)
+  cancellation: `Cancellation Policy — EazyRoutez (EazyRoutez.com)
 
 Overview:
 Cancellation policies are set by the host or property supplier and will be clearly
@@ -78,12 +78,12 @@ missing items, or excessive cleaning, supported by documented evidence.
 
 Emergency Cancellations:
 - In cases of force majeure (natural disasters, government restrictions, etc.),
-RentalConfirmation will work with both parties to find a fair resolution, which may
+EazyRoutez will work with both parties to find a fair resolution, which may
 include credit vouchers or rescheduling.
 
 Support:
 For cancellation or refund queries, please contact our team at
-support@rentalconfirmation.com and include your booking reference number.
+support@EazyRoutez.com and include your booking reference number.
 `,
 };
 
@@ -112,7 +112,7 @@ function PageShell({ title, children }) {
   );
 }
 
-export default function RentalConfirmationTerms() {
+export default function EazyRoutezTerms() {
   const [activeTab, setActiveTab] = useState("terms");
 
   return (
@@ -120,7 +120,7 @@ export default function RentalConfirmationTerms() {
       <div className="max-w-6xl mx-auto">
         <header className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6 gap-2">
           <h2 className="text-xl font-semibold">
-            RentalConfirmation — Policies
+            EazyRoutez — Policies
           </h2>
           <div className="text-sm text-gray-600">{rentalData.domain}</div>
         </header>
