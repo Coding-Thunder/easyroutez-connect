@@ -35,9 +35,9 @@ const CallButton = ({
       asChild
       className={cn(baseClasses, variants[variant], sizes[size], className)}
     >
-      <a href="tel:+18883194407" className="inline-flex items-center">
+      <a href="tel:+18778684662" className="inline-flex items-center">
         <Phone className="w-5 h-5" />
-        {variant === "secondary" ? "Call Now" : "+1-888-319-4407"}
+        {variant === "secondary" ? "Call Now" : "+1-877-868-4662"}
       </a>
     </Button>
   );

@@ -25,11 +25,11 @@ const Footer = () => {
             </a>
 
             <a
-              href="tel:+18883194407"
+              href="tel:+18778684662"
               className="flex items-center gap-2 text-gray-700 hover:text-green-600 transition-colors"
             >
               <Phone className="w-5 h-5 text-green-600" />
-              <span className="font-medium">+1-888-319-4407</span>
+              <span className="font-medium">+1-877-868-4662</span>
             </a>
 
             {/* Terms & Conditions Link */}
