@@ -124,7 +124,7 @@ function formatContent(text) {
   return text.split("\n").map((line, i) => {
     if (/^[A-Z][A-Za-z\s&]+:$/.test(line.trim())) {
       return (
-        <p key={i} className="text-blue-600 font-semibold mt-4 mb-1">
+        <p key={i} className="text-green-600 font-semibold mt-4 mb-1">
           {line}
         </p>
       );
@@ -199,7 +199,7 @@ export default function EazyRoutezTerms() {
               <div>Support: </div>
               <a
                 href={`mailto:${rentalData.supportEmail}`}
-                className="text-sm text-blue-600 break-all"
+                className="text-sm text-green-600 break-all"
               >
                 {rentalData.supportEmail}
               </a>
