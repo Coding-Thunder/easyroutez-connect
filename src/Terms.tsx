@@ -119,6 +119,20 @@ support@EazyRoutez.com and include your booking reference number or ticket ID.
 `,
 };
 
+// Helper: highlight headings
+function formatContent(text) {
+  return text.split("\n").map((line, i) => {
+    if (/^[A-Z][A-Za-z\s&]+:$/.test(line.trim())) {
+      return (
+        <p key={i} className="text-blue-600 font-semibold mt-4 mb-1">
+          {line}
+        </p>
+      );
+    }
+    return <p key={i} className="mb-1">{line}</p>;
+  });
+}
+
 function PageShell({ title, children }) {
   return (
     <div className="max-w-4xl mx-auto p-6 bg-white">
@@ -137,7 +151,7 @@ function PageShell({ title, children }) {
         </div>
       </div>
       <hr className="my-4" />
-      <div className="prose max-w-none whitespace-pre-wrap text-sm leading-relaxed">
+      <div className="prose max-w-none text-sm leading-relaxed">
         {children}
       </div>
     </div>
@@ -195,11 +209,11 @@ export default function EazyRoutezTerms() {
           <div className="md:col-span-3">
             {activeTab === "terms" ? (
               <PageShell title={`${rentalData.name} — Terms & Conditions`}>
-                {rentalData.terms}
+                {formatContent(rentalData.terms)}
               </PageShell>
             ) : (
               <PageShell title={`${rentalData.name} — Cancellation Policy`}>
-                {rentalData.cancellation}
+                {formatContent(rentalData.cancellation)}
               </PageShell>
             )}
           </div>
