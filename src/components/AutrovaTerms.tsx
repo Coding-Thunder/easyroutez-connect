@@ -1,87 +1,137 @@
 import React, { useState } from "react";
 
-const autrovaData = {
+const rentalData = {
   name: "Autrova",
   domain: "autrova.com",
   supportEmail: "support@autrova.com",
-  terms: `Welcome to Autrova (autrova.com). By using our platform, you agree to these
-Terms & Conditions, which govern your relationship with Autrova. We act solely as
-an intermediary between travelers and suppliers (rental car providers, agencies,
-or third-party operators).
+  terms: `Welcome to Autrova (autrova.com). By accessing or using
+our platform, you agree to comply with and be bound by the following Terms &
+Conditions. These terms govern your relationship with Autrova, which
+acts solely as an intermediary between travelers and service providers
+(including property hosts, car rental agencies, and airlines).
 
 Scope of Services:
-- Autrova provides an online platform for listing, searching, and booking rental cars.
-  We do not own, manage, or operate the vehicles listed.
-- Suppliers are responsible for accuracy of their listings, vehicle condition,
-  compliance with local laws, and delivery of promised services.
+- Autrova provides an online platform for listing, searching, and booking
+  short-term rental accommodations, car rentals, and flights. We do not own,
+  manage, or directly operate any of the listed services.
+- Providers (hosts, car agencies, airlines, etc.) are solely responsible for
+  accuracy of their listings, service condition, compliance with local/international
+  laws, and delivery of services promised.
 
 User Obligations:
-- You must provide complete and accurate information (name, contact, driver’s license,
-  payment details).
-- You agree not to misuse the platform for unlawful activity (fraudulent bookings,
-  false claims, misuse of rented vehicles).
-- Compliance with all traffic laws, insurance requirements, and supplier rules is
-  your responsibility.
+- You must provide accurate information during booking (name, contact details,
+  payment method, traveler IDs).
+- You agree not to misuse the platform (fraudulent bookings, false reviews, unlawful
+  activity).
+- You are responsible for complying with all applicable laws and regulations
+  (e.g., local tax obligations, airline identification requirements, driver license
+  obligations for rentals).
 
 Bookings & Payments:
-- All charges (base rate, insurance, taxes, surcharges, or extras) will be displayed
-  before checkout.
-- Payments may be processed by suppliers directly, or by Autrova on behalf of
-  suppliers using secure gateways.
-- Confirmation will be issued via email with a booking reference.
+- All prices are displayed clearly before checkout. Taxes, fees, or surcharges may
+  apply as indicated by the provider.
+- Payments may be processed directly by the provider, or by Autrova on the
+  provider’s behalf. If processed by us, secure payment gateways are used.
+- A booking is confirmed once you receive a written/email confirmation including
+  your booking ID or ticket number.
+
+Refunds:
+- Full Refund: Guests/travelers are eligible for a full refund if cancellations are
+  made within the timeframes specified by the provider’s refund policy (e.g.,
+  24–48 hours before check-in, prior to car pick-up, or before airline cut-off).
+- Partial Refund: Guests/travelers may receive a partial refund (e.g., 50%) if
+  cancellations occur after the full refund window but still meet the minimum
+  notice period as outlined by the provider’s policy.
+- All refunds, whether full or partial, are subject to documented verification and
+  processed using secure financial channels for credibility and transparency.
+- Providers and travelers will be notified via email of the refund amount, status,
+  and expected processing time.
 
 Liability:
-- Autrova is not liable for supplier actions, vehicle condition, or delivery beyond
-what is outlined in the supplier’s listing.
-- Disputes should be raised with the supplier first. Autrova may assist in mediation
-but does not guarantee refunds.
+- Autrova is not liable for provider actions, service condition, delays,
+  cancellations, or delivery beyond what is outlined in the provider’s listing
+  or policy.
+- Any disputes must be raised with the provider first. Autrova will assist
+  in mediation where possible but is not the guarantor of refunds or resolutions.
 
 Modifications & Termination:
-- Suppliers may cancel or modify bookings according to their rules.
-- Autrova reserves the right to suspend access if fraudulent or harmful activity is
-detected.
+- Providers may refuse, cancel, or modify bookings in line with their policies.
+- Autrova reserves the right to suspend access if misuse or fraudulent
+  activity is detected.
 
 Changes to Terms:
-- These Terms & Conditions may be updated periodically. Users will be informed via
-the platform or email if material changes occur.
+- These Terms & Conditions may be updated periodically. Users will be notified via
+the website or email when significant changes occur.
 `,
   cancellation: `Cancellation Policy — Autrova (autrova.com)
 
 Overview:
-Cancellation policies are determined by the rental supplier and will be displayed
-during the booking process and in the confirmation email.
+Cancellation policies are set by the provider (hotel, car rental agency, airline)
+and will be clearly presented during the booking process and in your confirmation
+email or e-ticket.
 
 Types of Policies:
-- Flexible: Full refund if canceled 24–48 hours before pick-up time.
-- Moderate: Partial refund (e.g., 50%) if canceled 3+ days before pick-up.
-- Strict: Little or no refund if canceled within 72 hours of pick-up.
+- Flexible: Full refund if cancellation is made within the defined window (e.g.,
+  24–48 hours before hotel check-in, before car pick-up time, or before airline
+  cut-off).
+- Moderate: Partial refund (typically 50%) if canceled 7 or more days before hotel
+  check-in, 48+ hours before car rental, or as defined by airline rules.
+- Strict: Little or no refund if canceled within the policy window (e.g., less than
+  7 days before hotel check-in, within 24 hours of car pick-up, or airline
+  non-refundable fares).
+
+Refund Credibility:
+- Full refunds are guaranteed under policies where the cancellation falls strictly
+  within the eligible timeframe, ensuring trust for both travelers and providers.
+- Partial refunds are calculated transparently based on the provider’s set terms,
+  and refund details are communicated clearly to maintain credibility and prevent
+  disputes.
+- All approved refunds, full or partial, are traceable through our secure payment
+  gateways, ensuring accountability for providers and reliability for travelers.
 
 No-Show Policy:
-- Failure to appear without canceling is considered a no-show. In such cases, the
-full booking amount may be charged as per supplier terms.
+- Failure to show up (at hotel check-in, car rental pick-up, or flight departure)
+  without prior cancellation will be considered a no-show, and the full booking
+  amount may be charged as per provider rules.
 
-Early Returns & Changes:
-- Early return of a vehicle or mid-rental changes may not qualify for a refund and
-depend entirely on supplier rules.
+Early Check-Out / Changes:
+- Leaving early, modifying travel dates, or flight changes after confirmation
+  are subject to provider approval and may result in partial refunds or no refund,
+  depending on provider policy.
 
 Refund Processing:
-- Approved refunds will be initiated promptly but may take 7–12 business days to
-appear depending on your bank/payment method.
+- Refunds approved under provider rules will be initiated promptly but may take
+  7–12 business days to reflect in your account, depending on the payment method
+  and financial institutions involved.
 
-Damages, Insurance & Fees:
-- Suppliers may deduct for damages, fuel discrepancies, late returns, or other
-contracted fees, supported by documented evidence.
+Damages, Penalties & Fees:
+- Providers reserve the right to withhold part of the booking amount for damages,
+  missing items, penalties, or excessive cleaning, supported by documented evidence.
 
 Emergency Cancellations:
-- In events such as natural disasters, accidents, or government restrictions,
-Autrova will work with both parties to arrange fair solutions such as vouchers,
-rescheduling, or partial refunds.
+- In cases of force majeure (natural disasters, government restrictions, airline
+  strikes, etc.), Autrova will work with both parties to find a fair resolution,
+  which may include credit vouchers or rescheduling.
 
 Support:
-For cancellation or refund inquiries, email
-support@autrova.com with your booking reference.
+For cancellation or refund queries, please contact our team at
+support@autrova.com and include your booking reference number or ticket ID.
 `,
 };
+
+// Helper: highlight headings
+function formatContent(text) {
+  return text.split("\n").map((line, i) => {
+    if (/^[A-Z][A-Za-z\s&]+:$/.test(line.trim())) {
+      return (
+        <p key={i} className="text-blue-600 font-semibold mt-4 mb-1">
+          {line}
+        </p>
+      );
+    }
+    return <p key={i} className="mb-1">{line}</p>;
+  });
+}
 
 function PageShell({ title, children }) {
   return (
@@ -89,7 +139,7 @@ function PageShell({ title, children }) {
       <div className="flex items-start justify-between flex-wrap gap-2">
         <div>
           <h1 className="text-2xl font-bold">{title}</h1>
-          <p className="text-sm text-muted-foreground">{autrovaData.domain}</p>
+          <p className="text-sm text-muted-foreground">{rentalData.domain}</p>
         </div>
         <div className="space-x-2">
           <button
@@ -101,7 +151,7 @@ function PageShell({ title, children }) {
         </div>
       </div>
       <hr className="my-4" />
-      <div className="prose max-w-none whitespace-pre-wrap text-sm leading-relaxed">
+      <div className="prose max-w-none text-sm leading-relaxed">
         {children}
       </div>
     </div>
@@ -116,7 +166,7 @@ export default function AutrovaTerms() {
       <div className="max-w-6xl mx-auto">
         <header className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6 gap-2">
           <h2 className="text-xl font-semibold">Autrova — Policies</h2>
-          <div className="text-sm text-gray-600">{autrovaData.domain}</div>
+          <div className="text-sm text-gray-600">{rentalData.domain}</div>
         </header>
 
         <div className="grid md:grid-cols-4 gap-4 mb-6">
@@ -148,28 +198,22 @@ export default function AutrovaTerms() {
             <div className="mt-6 text-xs text-gray-500">
               <div>Support: </div>
               <a
-                href={`mailto:${autrovaData.supportEmail}`}
+                href={`mailto:${rentalData.supportEmail}`}
                 className="text-sm text-blue-600 break-all"
               >
-                {autrovaData.supportEmail}
+                {rentalData.supportEmail}
               </a>
             </div>
           </div>
 
           <div className="md:col-span-3">
             {activeTab === "terms" ? (
-              <PageShell title={`${autrovaData.name} — Terms & Conditions`}>
-                {/* <p className="mb-2 text-sm text-gray-700">
-                  Last updated: {new Date().toLocaleDateString()}
-                </p> */}
-                {autrovaData.terms}
+              <PageShell title={`${rentalData.name} — Terms & Conditions`}>
+                {formatContent(rentalData.terms)}
               </PageShell>
             ) : (
-              <PageShell title={`${autrovaData.name} — Cancellation Policy`}>
-                {/* <p className="mb-2 text-sm text-gray-700">
-                  Last updated: {new Date().toLocaleDateString()}
-                </p> */}
-                {autrovaData.cancellation}
+              <PageShell title={`${rentalData.name} — Cancellation Policy`}>
+                {formatContent(rentalData.cancellation)}
               </PageShell>
             )}
           </div>
