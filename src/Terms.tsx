@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Header from "./components/Header";
 
 const rentalData = {
   name: "Rental Confirmation",
@@ -87,6 +88,24 @@ support@rentalconfirmation.com and include your booking reference number.
 `,
 };
 
+// Helper: highlight headings
+function formatContent(text) {
+  return text.split("\n").map((line, i) => {
+    if (/^[A-Z][A-Za-z\s&]+:$/.test(line.trim())) {
+      return (
+        <p key={i} className="text-green-600 font-semibold mt-4 mb-1">
+          {line}
+        </p>
+      );
+    }
+    return (
+      <p key={i} className="mb-1">
+        {line}
+      </p>
+    );
+  });
+}
+
 function PageShell({ title, children }) {
   return (
     <div className="max-w-4xl mx-auto p-6 bg-white">
@@ -105,9 +124,7 @@ function PageShell({ title, children }) {
         </div>
       </div>
       <hr className="my-4" />
-      <div className="prose max-w-none whitespace-pre-wrap text-sm leading-relaxed">
-        {children}
-      </div>
+      <div className="prose max-w-none text-sm leading-relaxed">{children}</div>
     </div>
   );
 }
@@ -116,78 +133,75 @@ export default function RentalConfirmationTerms() {
   const [activeTab, setActiveTab] = useState("terms");
 
   return (
-    <div className="min-h-screen bg-gray-50 p-4 sm:p-6">
-      <div className="max-w-6xl mx-auto">
-        <header className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6 gap-2">
-          <h2 className="text-xl font-semibold">
-            RentalConfirmation — Policies
-          </h2>
-          <div className="text-sm text-gray-600">{rentalData.domain}</div>
-        </header>
+    <>
+      {/* <Header /> */}
+      <div className="min-h-screen bg-gray-50 p-4 sm:p-6">
+        <div className="max-w-6xl mx-auto">
+          <header className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6 gap-2">
+            <h2 className="text-xl font-semibold">
+              RentalConfirmation — Policies
+            </h2>
+            <div className="text-sm text-gray-600">{rentalData.domain}</div>
+          </header>
 
-        <div className="grid md:grid-cols-4 gap-4 mb-6">
-          <div className="md:col-span-1 bg-white p-4 rounded-lg shadow-sm flex flex-col justify-between">
-            <div>
-              <label className="block text-xs font-medium text-gray-500 mb-2">
-                View
-              </label>
-              <div className="flex gap-2">
-                <button
-                  onClick={() => setActiveTab("terms")}
-                  className={`flex-1 px-3 py-2 rounded-md text-sm font-medium border ${
-                    activeTab === "terms" ? "bg-slate-100" : "bg-white"
-                  }`}
+          <div className="grid md:grid-cols-4 gap-4 mb-6">
+            <div className="md:col-span-1 bg-white p-4 rounded-lg shadow-sm flex flex-col justify-between">
+              <div>
+                <label className="block text-xs font-medium text-gray-500 mb-2">
+                  View
+                </label>
+                <div className="flex gap-2">
+                  <button
+                    onClick={() => setActiveTab("terms")}
+                    className={`flex-1 px-3 py-2 rounded-md text-sm font-medium border ${
+                      activeTab === "terms" ? "bg-slate-100" : "bg-white"
+                    }`}
+                  >
+                    Terms & Conditions
+                  </button>
+                  <button
+                    onClick={() => setActiveTab("cancellation")}
+                    className={`flex-1 px-3 py-2 rounded-md text-sm font-medium border ${
+                      activeTab === "cancellation" ? "bg-slate-100" : "bg-white"
+                    }`}
+                  >
+                    Cancellation Policy
+                  </button>
+                </div>
+              </div>
+
+              <div className="mt-6 text-xs text-gray-500">
+                <div>Support: </div>
+                <a
+                  href={`mailto:${rentalData.supportEmail}`}
+                  className="text-sm text-green-600 break-all"
                 >
-                  Terms & Conditions
-                </button>
-                <button
-                  onClick={() => setActiveTab("cancellation")}
-                  className={`flex-1 px-3 py-2 rounded-md text-sm font-medium border ${
-                    activeTab === "cancellation" ? "bg-slate-100" : "bg-white"
-                  }`}
-                >
-                  Cancellation Policy
-                </button>
+                  {rentalData.supportEmail}
+                </a>
               </div>
             </div>
 
-            <div className="mt-6 text-xs text-gray-500">
-              <div>Support: </div>
-              <a
-                href={`mailto:${rentalData.supportEmail}`}
-                className="text-sm text-blue-600 break-all"
-              >
-                {rentalData.supportEmail}
-              </a>
+            <div className="md:col-span-3">
+              {activeTab === "terms" ? (
+                <PageShell title={`${rentalData.name} — Terms & Conditions`}>
+                  {formatContent(rentalData.terms)}
+                </PageShell>
+              ) : (
+                <PageShell title={`${rentalData.name} — Cancellation Policy`}>
+                  {formatContent(rentalData.cancellation)}
+                </PageShell>
+              )}
             </div>
           </div>
 
-          <div className="md:col-span-3">
-            {activeTab === "terms" ? (
-              <PageShell title={`${rentalData.name} — Terms & Conditions`}>
-                {/* <p className="mb-2 text-sm text-gray-700">
-                  Last updated: {new Date().toLocaleDateString()}
-                </p> */}
-                {rentalData.terms}
-              </PageShell>
-            ) : (
-              <PageShell title={`${rentalData.name} — Cancellation Policy`}>
-                {/* <p className="mb-2 text-sm text-gray-700">
-                  Last updated: {new Date().toLocaleDateString()}
-                </p> */}
-                {rentalData.cancellation}
-              </PageShell>
-            )}
-          </div>
+          <footer className="text-center text-sm text-gray-500">
+            These policy templates are for general informational purposes only
+            and do not constitute legal advice. Please consult a qualified legal
+            professional to ensure compliance with jurisdiction-specific
+            requirements.
+          </footer>
         </div>
-
-        <footer className="text-center text-sm text-gray-500">
-          These policy templates are for general informational purposes only and
-          do not constitute legal advice. Please consult a qualified legal
-          professional to ensure compliance with jurisdiction-specific
-          requirements.
-        </footer>
       </div>
-    </div>
+    </>
   );
 }
