@@ -1,7 +1,7 @@
-import { Mail, Phone, Plane, Github, Twitter, Linkedin } from "lucide-react";
+import { Mail, Phone, Triangle } from "lucide-react";
 import { Link } from "react-router-dom";
 
-// A small, reusable component for footer links to keep the code clean
+// Reusable footer link
 const FooterLink = ({ to, children }) => (
   <Link
     to={to}
@@ -11,21 +11,34 @@ const FooterLink = ({ to, children }) => (
   </Link>
 );
 
+// Logo built with lucide-react + text
+const Logo = () => {
+  return (
+    <div className="flex items-center gap-1">
+      {/* Blue left-pointing triangle */}
+      <Triangle
+        className="w-12 h-12 text-blue-500 fill-blue-500"
+        stroke="none"
+        transform="rotate(-90)" // rotate so it points left
+      />
+      {/* Text block */}
+      <div className="leading-tight">
+        <div className="text-2xl font-bold text-black">Rental</div>
+        <div className="text-xs tracking-wide text-black">CONFIRMATION</div>
+      </div>
+    </div>
+  );
+};
+
 const Footer = () => {
   return (
     <footer className="bg-slate-50 border-t border-slate-200">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 py-16">
-        {/* Main grid for layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-          {/* Column 1: Brand and About */}
+          {/* Brand and About */}
           <div className="lg:col-span-5">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="bg-gradient-to-r from-blue-500 to-blue-700 p-2 rounded-xl shadow-lg">
-                <Plane className="w-6 h-6 text-white" />
-              </div>
-              <h2 className="text-2xl font-bold text-slate-800">
-                RentalConfirmation
-              </h2>
+            <div className="mb-4">
+              <Logo />
             </div>
             <p className="text-slate-600 text-sm max-w-md">
               Your trusted partner in finding the perfect rentals. We act as
@@ -33,7 +46,7 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Column 2: Policies */}
+          {/* Policies */}
           <div className="lg:col-span-2">
             <h3 className="text-sm font-semibold text-slate-900 mb-4 tracking-wider uppercase">
               Policies
@@ -43,11 +56,10 @@ const Footer = () => {
               <FooterLink to="/refunds&cancellation">
                 Refunds & Cancellations
               </FooterLink>
-              {/* <FooterLink to="/privacy">Privacy Policy</FooterLink> */}
             </div>
           </div>
 
-          {/* Column 3: Company */}
+          {/* Services */}
           <div className="lg:col-span-2">
             <h3 className="text-sm font-semibold text-slate-900 mb-4 tracking-wider uppercase">
               Services
@@ -60,7 +72,7 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Column 4: Contact Information */}
+          {/* Contact */}
           <div className="lg:col-span-3">
             <h3 className="text-sm font-semibold text-slate-900 mb-4 tracking-wider uppercase">
               Contact Us
@@ -72,7 +84,7 @@ const Footer = () => {
               >
                 <div>
                   <Mail className="w-5 h-5 text-blue-600" />
-                </div>{" "}
+                </div>
                 <span className="group-hover:underline">
                   support@rentalconfirmation.com
                 </span>
@@ -86,15 +98,12 @@ const Footer = () => {
                 </div>
                 <span className="group-hover:underline">+1-888-319-4407</span>
               </a>
-              {/* <p className="text-slate-600 text-sm mt-2">
-                37A/2 Kaushik Enclave, Burari, Delhi 110084
-              </p> */}
             </div>
           </div>
         </div>
       </div>
 
-      {/* Bottom Bar: Copyright and Socials */}
+      {/* Bottom Bar */}
       <div className="bg-slate-100 border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 py-6 flex flex-col sm:flex-row justify-center items-center gap-4">
           <p className="text-sm text-slate-500 text-center sm:text-left">
@@ -104,26 +113,6 @@ const Footer = () => {
             </span>
             . All Rights Reserved.
           </p>
-          {/* <div className="flex gap-5">
-            <a
-              href="#"
-              className="text-slate-500 hover:text-blue-600 transition-colors"
-            >
-              <Twitter className="w-5 h-5" />
-            </a>
-            <a
-              href="#"
-              className="text-slate-500 hover:text-blue-600 transition-colors"
-            >
-              <Github className="w-5 h-5" />
-            </a>
-            <a
-              href="#"
-              className="text-slate-500 hover:text-blue-600 transition-colors"
-            >
-              <Linkedin className="w-5 h-5" />
-            </a>
-          </div> */}
         </div>
       </div>
     </footer>
