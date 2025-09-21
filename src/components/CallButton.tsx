@@ -21,7 +21,7 @@ const CallButton = ({
       "bg-gradient-blue text-white border-2 border-primary hover:bg-primary-dark hover:scale-105",
     secondary:
       "bg-white text-primary border-2 border-primary hover:bg-primary-light",
-    header: "bg-green-400 text-primary-foreground hover:bg-primary-dark",
+    header: "bg-blue-400 text-primary-foreground hover:bg-primary-dark",
   };
 
   const sizes = {

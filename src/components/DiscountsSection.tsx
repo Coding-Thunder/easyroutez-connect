@@ -45,7 +45,7 @@ const DiscountsSection = () => {
                 key={index}
                 className="bg-white rounded-xl p-6 border-2 border-blue-border hover:border-primary transition-all duration-300 hover:shadow-medium group"
               >
-                <div className="bg-green-400 p-3 rounded-lg w-fit mb-4 group-hover:scale-110 transition-transform duration-300">
+                <div className="bg-blue-400 p-3 rounded-lg w-fit mb-4 group-hover:scale-110 transition-transform duration-300">
                   <IconComponent className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-foreground mb-2">

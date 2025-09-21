@@ -1,11 +1,8 @@
-import React, { useState } from "react";
-import Header from "./components/Header";
+import React from "react";
+import { Check } from "lucide-react";
 
-const rentalData = {
-  name: "RentalConfirmation",
-  domain: "rentalconfirmation.com",
-  supportEmail: "support@rentalconfirmation.com",
-  terms: `Welcome to RentalConfirmation (rentalconfirmation.com). By accessing or using
+// Text content
+const termsText = `Welcome to RentalConfirmation LLC (rentalconfirmation.com). By accessing or using
 our platform, you agree to comply with and be bound by the following Terms &
 Conditions. These terms govern your relationship with RentalConfirmation, which
 acts solely as an intermediary between travelers and service providers
@@ -36,18 +33,6 @@ Bookings & Payments:
 - A booking is confirmed once you receive a written/email confirmation including
   your booking ID or ticket number.
 
-Refunds:
-- Full Refund: Guests/travelers are eligible for a full refund if cancellations are
-  made within the timeframes specified by the provider’s refund policy (e.g.,
-  24–48 hours before check-in, prior to car pick-up, or before airline cut-off).
-- Partial Refund: Guests/travelers may receive a partial refund (e.g., 50%) if
-  cancellations occur after the full refund window but still meet the minimum
-  notice period as outlined by the provider’s policy.
-- All refunds, whether full or partial, are subject to documented verification and
-  processed using secure financial channels for credibility and transparency.
-- Providers and travelers will be notified via email of the refund amount, status,
-  and expected processing time.
-
 Liability:
 - RentalConfirmation is not liable for provider actions, service condition, delays,
   cancellations, or delivery beyond what is outlined in the provider’s listing
@@ -62,14 +47,15 @@ Modifications & Termination:
 
 Changes to Terms:
 - These Terms & Conditions may be updated periodically. Users will be notified via
-the website or email when significant changes occur.
-`,
-  cancellation: `Cancellation Policy — RentalConfirmation (rentalconfirmation.com)
+  the website or email when significant changes occur.
+`;
+
+const cancellationText = `Cancellation Policy — RentalConfirmation (rentalconfirmation.com)
 
 Overview:
-Cancellation policies are set by the provider (hotel, car rental agency, airline)
-and will be clearly presented during the booking process and in your confirmation
-email or e-ticket.
+- Cancellation policies are set by the provider (hotel, car rental agency, airline)
+  and will be clearly presented during the booking process and in your confirmation
+  email or e-ticket.
 
 Types of Policies:
 - Flexible: Full refund if cancellation is made within the defined window (e.g.,
@@ -115,21 +101,51 @@ Emergency Cancellations:
   which may include credit vouchers or rescheduling.
 
 Support:
-For cancellation or refund queries, please contact our team at
-support@rentalconfirmation.com and include your booking reference number or ticket ID.
-`,
+- For cancellation or refund queries, please contact our team at
+  support@rentalconfirmation.com and include your booking reference number or ticket ID.
+`;
+
+const rentalData = {
+  name: "RentalConfirmation",
+  domain: "rentalconfirmation.com",
+  supportEmail: "support@rentalconfirmation.com",
 };
 
-// Helper: highlight headings
-function formatContent(text) {
+function formatContent(text: string) {
   return text.split("\n").map((line, i) => {
+    // Headings ending with colon
     if (/^[A-Z][A-Za-z\s&]+:$/.test(line.trim())) {
       return (
-        <p key={i} className="text-green-600 font-semibold mt-4 mb-1">
-          {line}
-        </p>
+        <div className="flex items-center  mt-4 mb-1 gap-2">
+          <div className="bg-blue-600 rounded-full p-1">
+            <Check size={12} className="text-white" />
+          </div>
+          <p key={i} className="text-blue-600 font-semibold">
+            {line}
+          </p>
+        </div>
       );
     }
+
+    // Cancellation Policy title
+    if (line.includes("Cancellation Policy —")) {
+      return (
+        <h2 key={i} className="text-xl font-bold mt-8 mb-2">
+          {line}
+        </h2>
+      );
+    }
+
+    if (line.trim().startsWith("-")) {
+      return (
+        <div key={i} className="flex items-start mb-1">
+          {/* <Check className="text-blue-600 mt-1 mr-2 flex-shrink-0 w-4 h-4" /> */}
+          <span>{line.trim().substring(1).trim()}</span>
+        </div>
+      );
+    }
+
+    // Regular paragraph
     return (
       <p key={i} className="mb-1">
         {line}
@@ -138,15 +154,21 @@ function formatContent(text) {
   });
 }
 
-function PageShell({ title, children }) {
+function PageShell({
+  title,
+  children,
+}: {
+  title: string;
+  children: React.ReactNode;
+}) {
   return (
-    <div className="max-w-4xl mx-auto p-6 bg-white">
+    <div className="max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-sm">
       <div className="flex items-start justify-between flex-wrap gap-2">
         <div>
           <h1 className="text-2xl font-bold">{title}</h1>
-          <p className="text-sm text-muted-foreground">{rentalData.domain}</p>
+          <p className="text-sm text-gray-500">{rentalData.domain}</p>
         </div>
-        <div className="space-x-2">
+        <div>
           <button
             onClick={() => window.print()}
             className="px-3 py-2 rounded-md border text-sm hover:bg-gray-50"
@@ -161,79 +183,40 @@ function PageShell({ title, children }) {
   );
 }
 
-export default function RentalConfirmationTerms() {
-  const [activeTab, setActiveTab] = useState("terms");
-
+export function TermsAndServices() {
   return (
-    <>
-      {/* <Header /> */}
-      <div className="min-h-screen bg-gray-50 p-4 sm:p-6">
-        <div className="max-w-6xl mx-auto">
-          <header className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6 gap-2">
-            <h2 className="text-xl font-semibold">
-              RentalConfirmation — Policies
-            </h2>
-            <div className="text-sm text-gray-600">{rentalData.domain}</div>
-          </header>
+    <div className="min-h-screen bg-gray-50 p-4 sm:p-6">
+      <PageShell title="Terms & Services">{formatContent(termsText)}</PageShell>
+      <footer className="text-center text-sm text-gray-500 mt-6">
+        For support, contact{" "}
+        <a
+          href={`mailto:${rentalData.supportEmail}`}
+          className="text-blue-600 hover:underline"
+        >
+          {rentalData.supportEmail}
+        </a>
+        .
+      </footer>
+    </div>
+  );
+}
 
-          <div className="grid md:grid-cols-4 gap-4 mb-6">
-            <div className="md:col-span-1 bg-white p-4 rounded-lg shadow-sm flex flex-col justify-between">
-              <div>
-                <label className="block text-xs font-medium text-gray-500 mb-2">
-                  View
-                </label>
-                <div className="flex gap-2">
-                  <button
-                    onClick={() => setActiveTab("terms")}
-                    className={`flex-1 px-3 py-2 rounded-md text-sm font-medium border ${
-                      activeTab === "terms" ? "bg-slate-100" : "bg-white"
-                    }`}
-                  >
-                    Terms & Conditions
-                  </button>
-                  <button
-                    onClick={() => setActiveTab("cancellation")}
-                    className={`flex-1 px-3 py-2 rounded-md text-sm font-medium border ${
-                      activeTab === "cancellation" ? "bg-slate-100" : "bg-white"
-                    }`}
-                  >
-                    Cancellation Policy
-                  </button>
-                </div>
-              </div>
-
-              <div className="mt-6 text-xs text-gray-500">
-                <div>Support: </div>
-                <a
-                  href={`mailto:${rentalData.supportEmail}`}
-                  className="text-sm text-green-600 break-all"
-                >
-                  {rentalData.supportEmail}
-                </a>
-              </div>
-            </div>
-
-            <div className="md:col-span-3">
-              {activeTab === "terms" ? (
-                <PageShell title={`${rentalData.name} — Terms & Conditions`}>
-                  {formatContent(rentalData.terms)}
-                </PageShell>
-              ) : (
-                <PageShell title={`${rentalData.name} — Cancellation Policy`}>
-                  {formatContent(rentalData.cancellation)}
-                </PageShell>
-              )}
-            </div>
-          </div>
-
-          <footer className="text-center text-sm text-gray-500">
-            These policy templates are for general informational purposes only
-            and do not constitute legal advice. Please consult a qualified legal
-            professional to ensure compliance with jurisdiction-specific
-            requirements.
-          </footer>
-        </div>
-      </div>
-    </>
+export function RefundsAndCancellation() {
+  return (
+    <div className="min-h-screen bg-gray-50 p-4 sm:p-6">
+      <PageShell title="Refunds & Cancellation">
+        {formatContent(cancellationText)}
+      </PageShell>
+      <footer className="text-center text-sm text-gray-500 mt-6">
+        For support, contact{" "}
+        <a
+          href={`mailto:${rentalData.supportEmail}`}
+          className="text-blue-600 hover:underline"
+        >
+          {rentalData.supportEmail}
+        </a>
+        .
+      </footer>
+    </div>
   );
 }

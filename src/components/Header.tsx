@@ -7,10 +7,10 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center gap-3">
-            {/* <div className="bg-green-400 p-2 rounded-lg">
+            {/* <div className="bg-blue-400 p-2 rounded-lg">
               <Plane className="w-6 h-6 text-white" />
             </div> */}
-            <h1 className="text-xl md:text-2xl text-green-400 font-bold text-foreground flex flex-col sm:flex-row">
+            <h1 className="text-xl md:text-2xl text-blue-400 font-bold text-foreground flex flex-col sm:flex-row">
               <span className="text-black">Rental</span>
               <span>Confirmation</span>
             </h1>

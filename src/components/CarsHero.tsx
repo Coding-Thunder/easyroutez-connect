@@ -41,8 +41,8 @@ const CarsHero = () => {
               key={tab.key}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200 ${
                 activeTab === tab.key
-                  ? "bg-green-400 text-white"
-                  : "bg-white text-green-900 hover:bg-green-200"
+                  ? "bg-blue-400 text-white"
+                  : "bg-white text-blue-900 hover:bg-blue-200"
               }`}
               onClick={() => navigate(tab.path)}
             >
@@ -53,7 +53,7 @@ const CarsHero = () => {
 
         {/* Title */}
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-          Rent Affordable <span className="text-green-400">Cars</span>
+          Rent Affordable <span className="text-blue-400">Cars</span>
         </h1>
 
         {/* Widget */}

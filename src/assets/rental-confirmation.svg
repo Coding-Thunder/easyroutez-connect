@@ -23,7 +23,7 @@
   <text x="40" y="105" class="title-left">RENTAL</text>
 
   <!-- Accent lines under RENTAL -->
-  <!-- thin green line -->
+  <!-- thin blue line -->
   <rect x="40" y="120" width="300" height="8" rx="2" ry="2" fill="#1C9A6B"/>
   <!-- three orange bars -->
   <rect x="40" y="140" width="300" height="14" rx="3" ry="3" fill="#F0852A"/>
