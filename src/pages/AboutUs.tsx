@@ -71,14 +71,13 @@ export function AboutUs() {
         </p>
 
         <p>
-          Our values guide everything we do.{" "}
-          <strong>Integrity</strong> means we always communicate honestly and
-          set clear expectations. <strong>Reliability</strong> means you can
-          count on us when it matters most, whether it’s help with a booking or
-          navigating cancellations. <strong>Innovation</strong> drives us to
-          keep improving our tools and services. And{" "}
-          <strong>customer focus</strong> ensures that your satisfaction remains
-          at the center of our mission.
+          Our values guide everything we do. <strong>Integrity</strong> means we
+          always communicate honestly and set clear expectations.{" "}
+          <strong>Reliability</strong> means you can count on us when it matters
+          most, whether it’s help with a booking or navigating cancellations.{" "}
+          <strong>Innovation</strong> drives us to keep improving our tools and
+          services. And <strong>customer focus</strong> ensures that your
+          satisfaction remains at the center of our mission.
         </p>
 
         <p>
