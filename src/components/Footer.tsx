@@ -23,8 +23,8 @@ const Logo = () => {
       />
       {/* Text block */}
       <div className="leading-tight">
-        <div className="text-2xl font-bold text-black">Rental</div>
-        <div className="text-xs tracking-wide text-black">CONFIRMATION</div>
+        <div className="text-2xl font-bold text-black">Universal</div>
+        <div className="text-xs tracking-wide text-blue-600">Ticketss</div>
       </div>
     </div>
   );
