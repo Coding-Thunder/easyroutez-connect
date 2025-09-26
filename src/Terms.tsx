@@ -2,14 +2,14 @@ import React from "react";
 import { Check } from "lucide-react";
 
 // Text content
-const termsText = `Welcome to RentalConfirmation LLC (rentalconfirmation.com). By accessing or using
+const termsText = `Welcome to UniversalTicketss LLC (UniversalTicketss.com). By accessing or using
 our platform, you agree to comply with and be bound by the following Terms &
-Conditions. These terms govern your relationship with RentalConfirmation, which
+Conditions. These terms govern your relationship with UniversalTicketss, which
 acts solely as an intermediary between travelers and service providers
 (including property hosts, car rental agencies, and airlines).
 
 Scope of Services:
-- RentalConfirmation provides an online platform for listing, searching, and booking
+- UniversalTicketss provides an online platform for listing, searching, and booking
   short-term rental accommodations, car rentals, and flights. We do not own,
   manage, or directly operate any of the listed services.
 - Providers (hosts, car agencies, airlines, etc.) are solely responsible for
@@ -28,21 +28,21 @@ User Obligations:
 Bookings & Payments:
 - All prices are displayed clearly before checkout. Taxes, fees, or surcharges may
   apply as indicated by the provider.
-- Payments may be processed directly by the provider, or by RentalConfirmation on the
+- Payments may be processed directly by the provider, or by UniversalTicketss on the
   provider’s behalf. If processed by us, secure payment gateways are used.
 - A booking is confirmed once you receive a written/email confirmation including
   your booking ID or ticket number.
 
 Liability:
-- RentalConfirmation is not liable for provider actions, service condition, delays,
+- UniversalTicketss is not liable for provider actions, service condition, delays,
   cancellations, or delivery beyond what is outlined in the provider’s listing
   or policy.
-- Any disputes must be raised with the provider first. RentalConfirmation will assist
+- Any disputes must be raised with the provider first. UniversalTicketss will assist
   in mediation where possible but is not the guarantor of refunds or resolutions.
 
 Modifications & Termination:
 - Providers may refuse, cancel, or modify bookings in line with their policies.
-- RentalConfirmation reserves the right to suspend access if misuse or fraudulent
+- UniversalTicketss reserves the right to suspend access if misuse or fraudulent
   activity is detected.
 
 Changes to Terms:
@@ -50,7 +50,7 @@ Changes to Terms:
   the website or email when significant changes occur.
 `;
 
-const cancellationText = `Cancellation Policy — RentalConfirmation (rentalconfirmation.com)
+const cancellationText = `Cancellation Policy — UniversalTicketss (UniversalTicketss.com)
 
 Overview:
 - Cancellation policies are set by the provider (hotel, car rental agency, airline)
@@ -97,18 +97,18 @@ Damages, Penalties & Fees:
 
 Emergency Cancellations:
 - In cases of force majeure (natural disasters, government restrictions, airline
-  strikes, etc.), Rentalconfirmation.com will work with both parties to find a fair resolution,
+  strikes, etc.), UniversalTicketss.com will work with both parties to find a fair resolution,
   which may include credit vouchers or rescheduling.
 
 Support:
 - For cancellation or refund queries, please contact our team at
-  support@rentalconfirmation.com and include your booking reference number or ticket ID.
+  support@universalticketss.com and include your booking reference number or ticket ID.
 `;
 
 const rentalData = {
-  name: "RentalConfirmation",
-  domain: "rentalconfirmation.com",
-  supportEmail: "support@rentalconfirmation.com",
+  name: "UniversalTicketss",
+  domain: "UniversalTicketss.com",
+  supportEmail: "support@universalticketss.com",
 };
 
 function formatContent(text: string) {

@@ -3,7 +3,7 @@ import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 const faqs = [
   {
-    question: "How does RentalConfirmation work?",
+    question: "How does UniversalTicketss work?",
     answer:
       "Just call us, and our travel experts will handle everything — from booking flights and reserving hotels to arranging car rentals. We ensure smooth planning and the best deals, all in one place.",
   },

@@ -2,9 +2,9 @@ import React from "react";
 import heroBg from "@/assets/hero.jpg";
 
 const rentalData = {
-  name: "RentalConfirmation",
-  domain: "rentalconfirmation.com",
-  supportEmail: "support@rentalconfirmation.com",
+  name: "UniversalTicketss",
+  domain: "UniversalTicketss.com",
+  supportEmail: "support@universalticketss.com",
 };
 
 const AboutHero = () => {
@@ -16,7 +16,7 @@ const AboutHero = () => {
       <div className="absolute inset-0 bg-black/70"></div>
       <div className="relative max-w-4xl mx-auto px-4 text-center text-white">
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">
-          About <span className="text-blue-400">RentalConfirmation</span>
+          About <span className="text-blue-400">UniversalTicketss</span>
         </h1>
         <p className="text-lg sm:text-xl lg:text-2xl">
           Trusted travel consultancy for seamless rentals, cars, and flights.
@@ -33,7 +33,7 @@ export function AboutUs() {
 
       <div className="max-w-4xl mx-auto px-6 py-12 space-y-8 text-gray-700 leading-relaxed">
         <p>
-          Welcome to <strong>RentalConfirmation LLC</strong> — your dedicated
+          Welcome to <strong>UniversalTicketss LLC</strong> — your dedicated
           partner in navigating the world of short-term rentals, car rentals,
           and flights. We are not the airlines, property owners, or rental
           agencies themselves. Instead, we proudly serve as your{" "}
@@ -62,7 +62,7 @@ export function AboutUs() {
         </p>
 
         <p>
-          At the heart of RentalConfirmation is a simple belief:{" "}
+          At the heart of UniversalTicketss is a simple belief:{" "}
           <em>travel should feel easy, transparent, and enjoyable</em>. Whether
           you’re booking a weekend getaway, a business trip, or a long-awaited
           vacation, we strive to remove the stress from the process. Our team of
@@ -81,7 +81,7 @@ export function AboutUs() {
         </p>
 
         <p>
-          With RentalConfirmation, you’re never just a transaction. You’re part
+          With UniversalTicketss, you’re never just a transaction. You’re part
           of a community of travelers who value convenience, clarity, and care.
           We may not own the plane you fly on or the keys to the home you stay
           in, but we promise to stand beside you throughout the journey — as

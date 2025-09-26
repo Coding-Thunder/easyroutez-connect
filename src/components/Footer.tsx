@@ -79,14 +79,14 @@ const Footer = () => {
             </h3>
             <div className="flex flex-col gap-3">
               <a
-                href="mailto:support@rentalconfirmation.com"
+                href="mailto:support@universalticketss.com"
                 className="flex items-center gap-3 text-slate-600 hover:text-blue-600 transition-colors group"
               >
                 <div>
                   <Mail className="w-5 h-5 text-blue-600" />
                 </div>
                 <span className="group-hover:underline">
-                  support@rentalconfirmation.com
+                  support@universalticketss.com
                 </span>
               </a>
               <a
@@ -109,7 +109,7 @@ const Footer = () => {
           <p className="text-sm text-slate-500 text-center sm:text-left">
             © {new Date().getFullYear()}{" "}
             <span className="font-semibold text-slate-800">
-              RentalConfirmation
+              UniversalTicketss
             </span>
             . All Rights Reserved.
           </p>
